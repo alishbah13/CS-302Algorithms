@@ -7,6 +7,15 @@
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
 
 	<div class="content">
 	<form name="Form" action="" method="post" onsubmit="">
@@ -21,7 +30,7 @@
 							<div class="row">
 								<div class="col-5">
 									<div class="icon-big text-center">
-										<input type="radio" style="margin-right: 10px;" name="file" value="1">
+										<input type="radio" style="margin-right: 10px;" name="file" value="1" required>
 										<i class="flaticon-file" ></i>
 									</div>
 								</div>
@@ -223,7 +232,7 @@
 			
 
 			<div class="col-6">
-				<button type="submit" class="btn btn-round btn-success" id="runs">
+				<button type="submit" class="btn btn-round btn-success" id="runs" >
 					<span class="btn-label">
 						<i class="fa fa-play"></i>
 					</span>
@@ -437,44 +446,3 @@
 <!-- 999999999999999999999999999999999999999999999999999999999999999999999999 -->
 <!-- 999999999999999999999999999999999999999999999999999999999999999999999999 -->
 {% endblock content %}
-
-{% block javascripts %}
-
-	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<!-- <script src="/static/assets/js/setting-demo2.js"></script> -->
-	<script>
-		//== Class definition
-		// var SweetAlert2Demo = function() {
-
-			//== Demos
-			var initDemos = function() {
-
-				//== Sweetalert Demo 3
-				$('#input_1').click(function(e) {
-					swal("Good job!", "You clicked the button!", {
-						icon : "info",
-						buttons: {        			
-							confirm: {
-								className : 'btn btn-info'
-							}
-						},
-					});
-				});
-			};
-
-			return {
-				//== Init
-				init: function() {
-					initDemos();
-				},
-			};
-		// }();
-
-		//== Class Initialization
-		jQuery(document).ready(function() {
-			SweetAlert2Demo.init();
-		});
-	</script>
-
-{% endblock javascripts %}
-

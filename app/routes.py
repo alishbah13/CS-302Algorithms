@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, url_for, request
+from flask import render_template, url_for, request, Flask, flash
 from app.util import getFiles
 
 @app.route('/', methods=['GET', 'POST'])
@@ -19,10 +19,9 @@ def lcs():
 
 @app.route('/scs', methods=['GET', 'POST'])
 def scs():
-    f = open("app/static/assets/text/scs/input1.txt", "r") 
-    i1 = f.read()
-    f.close()
+    input_list = getFiles("scs")
+    flash("hello")
     if request.method == 'POST':
         qty = request.form['file']
         return qty
-    return render_template('lcs.html', title='Shortest Common Supersequence', inpt=i1)
+    return render_template('lcs.html', title='Shortest Common Supersequence', inpt=input_list)
