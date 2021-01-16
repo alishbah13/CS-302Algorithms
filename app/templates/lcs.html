@@ -7,6 +7,7 @@
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
+
 {% with messages = get_flashed_messages() %}
   {% if messages %}
     <ul class=flashes>
@@ -30,7 +31,7 @@
 							<div class="row">
 								<div class="col-5">
 									<div class="icon-big text-center">
-										<input type="radio" style="margin-right: 10px;" name="file" value="1" required>
+										<input type="radio" style="margin-right: 10px;" name="file" value="1" checked="checked">
 										<i class="flaticon-file" ></i>
 									</div>
 								</div>
