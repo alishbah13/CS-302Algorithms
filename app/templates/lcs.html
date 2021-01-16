@@ -1,0 +1,480 @@
+{% extends "base.html" %}
+
+{% block title %} LCS {% endblock %} 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+	<div class="content">
+	<form name="Form" action="" method="post" onsubmit="">
+		<div class="page-inner" style="margin-left: 30px;">
+			<!-- Card -->
+			<h4 class="page-title" style="margin-top: 100px; margin-bottom: 50px;">{{ title }}</h4>
+			<div class="row">
+				<div class="col">
+					<div  class=" card card-stats card-primary card-round"  >
+						
+						<div class="card-body">
+							<div class="row">
+								<div class="col-5">
+									<div class="icon-big text-center">
+										<input type="radio" style="margin-right: 10px;" name="file" value="1">
+										<i class="flaticon-file" ></i>
+									</div>
+								</div>
+								<div class="col-7 col-stats">
+									<div class="numbers">
+										<p class="btn card-category" data-toggle="modal" data-target="#myModal1">Input1.txt</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div  class=" card card-stats card-primary card-round"  >
+						
+						<div class="card-body">
+							<div class="row">
+								<div class="col-5">
+									<div class="icon-big text-center">
+										<input type="radio" style="margin-right: 10px;" name="file" value="2">
+										<i class="flaticon-file" ></i>
+									</div>
+								</div>
+								<div class="col-7 col-stats">
+									<div class="numbers">
+										<p class="btn card-category" data-toggle="modal" data-target="#myModal2">Input2.txt</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div  class=" card card-stats card-primary card-round"  >
+						
+						<div class="card-body">
+							<div class="row">
+								<div class="col-5">
+									<div class="icon-big text-center">
+										<input type="radio" style="margin-right: 10px;" name="file" value="3">
+										<i class="flaticon-file" ></i>
+									</div>
+								</div>
+								<div class="col-7 col-stats">
+									<div class="numbers">
+										<p class="btn card-category" data-toggle="modal" data-target="#myModal3">Input3.txt</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div  class=" card card-stats card-primary card-round"  >
+						
+						<div class="card-body">
+							<div class="row">
+								<div class="col-5">
+									<div class="icon-big text-center">
+										<input type="radio" style="margin-right: 10px;" name="file" value="4"> 
+										<i class="flaticon-file" ></i>
+									</div>
+								</div>
+								<div class="col-7 col-stats">
+									<div class="numbers">
+										<p class="btn card-category" data-toggle="modal" data-target="#myModal4">Input4.txt</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div  class=" card card-stats card-primary card-round"  >
+						
+						<div class="card-body">
+							<div class="row">
+								<div class="col-5">
+									<div class="icon-big text-center">
+										<input type="radio" style="margin-right: 10px;" name="file" value="5">
+										<i class="flaticon-file" ></i>
+									</div>
+								</div>
+								<div class="col-7 col-stats">
+									<div class="numbers">
+										<p class="btn card-category" data-toggle="modal" data-target="#myModal5">Input5.txt</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+				<div class="row">
+				<div class="col">
+					<div class="card card-stats card-secondary card-round">
+
+						<div class="card-body ">
+							<div class="row">
+								<div class="col-5">
+									<div class="icon-big text-center">
+										<input type="radio" style="margin-right: 10px;" name="file" value="6">
+										<i class="flaticon-file"></i>
+									</div>
+								</div>
+								<div class="col-7 col-stats">
+									<div class="numbers">
+										<p class="btn card-category" data-toggle="modal" data-target="#myModal6">Input6.txt</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card card-stats card-secondary card-round">
+
+						<div class="card-body ">
+							<div class="row">
+								<div class="col-5">
+									<div class="icon-big text-center">
+										<input type="radio" style="margin-right: 10px;" name="file" value="7">
+										<i class="flaticon-file"></i>
+									</div>
+								</div>
+								<div class="col-7 col-stats">
+									<div class="numbers">
+										<p class="btn card-category" data-toggle="modal" data-target="#myModal7">Input7.txt</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card card-stats card-secondary card-round">
+
+						<div class="card-body ">
+							<div class="row">
+								<div class="col-5">
+									<div class="icon-big text-center">
+										<input type="radio" style="margin-right: 10px;" name="file" value="8">
+										<i class="flaticon-file"></i>
+									</div>
+								</div>
+								<div class="col-7 col-stats">
+									<div class="numbers">
+										<p class="btn card-category" data-toggle="modal" data-target="#myModal8">Input8.txt</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card card-stats card-secondary card-round">
+
+						<div class="card-body ">
+							<div class="row">
+								<div class="col-5">
+									<div class="icon-big text-center">
+										<input type="radio" style="margin-right: 10px;" name="file" value="9">
+										<i class="flaticon-file"></i>
+									</div>
+								</div>
+								<div class="col-7 col-stats">
+									<div class="numbers">
+										<p class="btn card-category" data-toggle="modal" data-target="#myModal9">Input9.txt</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card card-stats card-secondary card-round">
+
+						<div class="card-body ">
+							<div class="row">
+								<div class="col-5">
+									<div class="icon-big text-center">
+										<input type="radio" style="margin-right: 10px;" name="file" value="10">
+										<i class="flaticon-file"></i>
+									</div>
+								</div>
+								<div class="col-7 col-stats">
+									<div class="numbers">
+										<p class="btn card-category" data-toggle="modal" data-target="#myModal10">Input10.txt</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			
+			</div>
+			
+
+			<div class="col-6">
+				<button type="submit" class="btn btn-round btn-success" id="runs">
+					<span class="btn-label">
+						<i class="fa fa-play"></i>
+					</span>
+					Run
+				</button>
+			</div>
+
+		</form>
+	</div>
+<!-- 999999999999999999999999999999999999999999999999999999999999999999999999 -->
+<!-- 999999999999999999999999999999999999999999999999999999999999999999999999 -->
+<div id="myModal10" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+  
+	  <!-- Modal content-->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title"></h4>
+		</div>
+		<div class="modal-body">
+		  <p style="color: black;">{{ inpt[9] }}</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+
+  <div id="myModal9" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+  
+	  <!-- Modal content-->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title"></h4>
+		</div>
+		<div class="modal-body">
+		  <p style="color: black;">{{ inpt[8] }}</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+  
+  <div id="myModal8" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+  
+	  <!-- Modal content-->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title"></h4>
+		</div>
+		<div class="modal-body">
+		  <p style="color: black;">{{ inpt[7] }}</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+
+  <div id="myModal7" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+  
+	  <!-- Modal content-->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title"></h4>
+		</div>
+		<div class="modal-body">
+		  <p style="color: black;">{{ inpt[6] }}</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+
+  <div id="myModal6" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+  
+	  <!-- Modal content-->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title"></h4>
+		</div>
+		<div class="modal-body">
+		  <p style="color: black;">{{ inpt[5] }}</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+
+  <div id="myModal5" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+  
+	  <!-- Modal content-->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title"></h4>
+		</div>
+		<div class="modal-body">
+		  <p style="color: black;">{{ inpt[4] }}</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+
+  <div id="myModal4" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+  
+	  <!-- Modal content-->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title"></h4>
+		</div>
+		<div class="modal-body">
+		  <p style="color: black;">{{ inpt[3] }}</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+
+  <div id="myModal3" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+  
+	  <!-- Modal content-->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title"></h4>
+		</div>
+		<div class="modal-body">
+		  <p style="color: black;">{{ inpt[2] }}</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+
+  <div id="myModal2" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+  
+	  <!-- Modal content-->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title"></h4>
+		</div>
+		<div class="modal-body">
+		  <p style="color: black;">{{ inpt[1] }}</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+
+  <div id="myModal1" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+  
+	  <!-- Modal content-->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title"></h4>
+		</div>
+		<div class="modal-body">
+		  <p style="color: black;">{{ inpt[0] }}</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+<!-- 999999999999999999999999999999999999999999999999999999999999999999999999 -->
+<!-- 999999999999999999999999999999999999999999999999999999999999999999999999 -->
+{% endblock content %}
+
+{% block javascripts %}
+
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<!-- <script src="/static/assets/js/setting-demo2.js"></script> -->
+	<script>
+		//== Class definition
+		// var SweetAlert2Demo = function() {
+
+			//== Demos
+			var initDemos = function() {
+
+				//== Sweetalert Demo 3
+				$('#input_1').click(function(e) {
+					swal("Good job!", "You clicked the button!", {
+						icon : "info",
+						buttons: {        			
+							confirm: {
+								className : 'btn btn-info'
+							}
+						},
+					});
+				});
+			};
+
+			return {
+				//== Init
+				init: function() {
+					initDemos();
+				},
+			};
+		// }();
+
+		//== Class Initialization
+		jQuery(document).ready(function() {
+			SweetAlert2Demo.init();
+		});
+	</script>
+
+{% endblock javascripts %}
+
