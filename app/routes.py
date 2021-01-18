@@ -10,6 +10,7 @@ def home():
 @app.route('/lcs', methods=['GET', 'POST'])
 def lcs():
     input_list = getFiles("lcs")
+    return input_list[0]
     out = " "
     if request.method == 'POST':
         dat = request.form['file']
