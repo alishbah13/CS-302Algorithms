@@ -8,15 +8,11 @@
 
 {% block content %}
 
-{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul class=flashes>
-    {% for message in messages %}
-      <li>{{ message }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
 
 	<div class="content">
 	<form name="Form" action="" method="post" onsubmit="">
@@ -32,7 +28,7 @@
 								<div class="col-5">
 									<div class="icon-big text-center">
 										<input type="radio" style="margin-right: 10px;" name="file" value="1" checked="checked">
-										<i class="flaticon-file" ></i>
+										<i class="fa fa-file-text-o" ></i>
 									</div>
 								</div>
 								<div class="col-7 col-stats">
@@ -52,7 +48,7 @@
 								<div class="col-5">
 									<div class="icon-big text-center">
 										<input type="radio" style="margin-right: 10px;" name="file" value="2">
-										<i class="flaticon-file" ></i>
+										<i class="fa fa-file-text-o" ></i>
 									</div>
 								</div>
 								<div class="col-7 col-stats">
@@ -72,7 +68,7 @@
 								<div class="col-5">
 									<div class="icon-big text-center">
 										<input type="radio" style="margin-right: 10px;" name="file" value="3">
-										<i class="flaticon-file" ></i>
+										<i class="fa fa-file-text-o" ></i>
 									</div>
 								</div>
 								<div class="col-7 col-stats">
@@ -92,7 +88,7 @@
 								<div class="col-5">
 									<div class="icon-big text-center">
 										<input type="radio" style="margin-right: 10px;" name="file" value="4"> 
-										<i class="flaticon-file" ></i>
+										<i class="fa fa-file-text-o" ></i>
 									</div>
 								</div>
 								<div class="col-7 col-stats">
@@ -112,7 +108,7 @@
 								<div class="col-5">
 									<div class="icon-big text-center">
 										<input type="radio" style="margin-right: 10px;" name="file" value="5">
-										<i class="flaticon-file" ></i>
+										<i class="fa fa-file-text-o" ></i>
 									</div>
 								</div>
 								<div class="col-7 col-stats">
@@ -134,7 +130,7 @@
 								<div class="col-5">
 									<div class="icon-big text-center">
 										<input type="radio" style="margin-right: 10px;" name="file" value="6">
-										<i class="flaticon-file"></i>
+										<i class="fa fa-file-text-o"></i>
 									</div>
 								</div>
 								<div class="col-7 col-stats">
@@ -155,7 +151,7 @@
 								<div class="col-5">
 									<div class="icon-big text-center">
 										<input type="radio" style="margin-right: 10px;" name="file" value="7">
-										<i class="flaticon-file"></i>
+										<i class="fa fa-file-text-o"></i>
 									</div>
 								</div>
 								<div class="col-7 col-stats">
@@ -175,7 +171,7 @@
 								<div class="col-5">
 									<div class="icon-big text-center">
 										<input type="radio" style="margin-right: 10px;" name="file" value="8">
-										<i class="flaticon-file"></i>
+										<i class="fa fa-file-text-o"></i>
 									</div>
 								</div>
 								<div class="col-7 col-stats">
@@ -195,7 +191,7 @@
 								<div class="col-5">
 									<div class="icon-big text-center">
 										<input type="radio" style="margin-right: 10px;" name="file" value="9">
-										<i class="flaticon-file"></i>
+										<i class="fa fa-file-text-o"></i>
 									</div>
 								</div>
 								<div class="col-7 col-stats">
@@ -215,7 +211,7 @@
 								<div class="col-5">
 									<div class="icon-big text-center">
 										<input type="radio" style="margin-right: 10px;" name="file" value="10">
-										<i class="flaticon-file"></i>
+										<i class="fa fa-file-text-o"></i>
 									</div>
 								</div>
 								<div class="col-7 col-stats">
@@ -235,7 +231,7 @@
 			<div class="col-6">
 				<button type="submit" style="margin-bottom: 10px;" class="btn btn-round btn-success" id="runs" >
 					<span class="btn-label">
-						<i class="flaticon-play-button-1"></i>
+						<i class="fa fa-play"></i>
 					</span>
 					Run
 				</button>
@@ -257,7 +253,7 @@
 	<div class="modal-dialog">
   
 	  <!-- Modal content-->
-	  <div class="modal-content">
+	  <div class="modal-content" style="margin-top: 65%;">
 		<div class="modal-header">
 		  <button type="button" class="close" data-dismiss="modal">&times;</button>
 		  <h4 class="modal-title"></h4>
@@ -277,7 +273,7 @@
 	<div class="modal-dialog">
   
 	  <!-- Modal content-->
-	  <div class="modal-content">
+	  <div class="modal-content"  style="margin-top: 65%;">
 		<div class="modal-header">
 		  <button type="button" class="close" data-dismiss="modal">&times;</button>
 		  <h4 class="modal-title"></h4>
@@ -297,7 +293,7 @@
 	<div class="modal-dialog">
   
 	  <!-- Modal content-->
-	  <div class="modal-content">
+	  <div class="modal-content" style="margin-top: 65%;">
 		<div class="modal-header">
 		  <button type="button" class="close" data-dismiss="modal">&times;</button>
 		  <h4 class="modal-title"></h4>
@@ -317,7 +313,7 @@
 	<div class="modal-dialog">
   
 	  <!-- Modal content-->
-	  <div class="modal-content">
+	  <div class="modal-content" style="margin-top: 65%;">
 		<div class="modal-header">
 		  <button type="button" class="close" data-dismiss="modal">&times;</button>
 		  <h4 class="modal-title"></h4>
@@ -337,7 +333,7 @@
 	<div class="modal-dialog">
   
 	  <!-- Modal content-->
-	  <div class="modal-content">
+	  <div class="modal-content" style="margin-top: 65%;">
 		<div class="modal-header">
 		  <button type="button" class="close" data-dismiss="modal">&times;</button>
 		  <h4 class="modal-title"></h4>
@@ -357,7 +353,7 @@
 	<div class="modal-dialog">
   
 	  <!-- Modal content-->
-	  <div class="modal-content">
+	  <div class="modal-content" style="margin-top: 65%;">
 		<div class="modal-header">
 		  <button type="button" class="close" data-dismiss="modal">&times;</button>
 		  <h4 class="modal-title"></h4>
@@ -377,7 +373,7 @@
 	<div class="modal-dialog">
   
 	  <!-- Modal content-->
-	  <div class="modal-content">
+	  <div class="modal-content" style="margin-top: 65%;">
 		<div class="modal-header">
 		  <button type="button" class="close" data-dismiss="modal">&times;</button>
 		  <h4 class="modal-title"></h4>
@@ -397,7 +393,7 @@
 	<div class="modal-dialog">
   
 	  <!-- Modal content-->
-	  <div class="modal-content">
+	  <div class="modal-content" style="margin-top: 65%;">
 		<div class="modal-header">
 		  <button type="button" class="close" data-dismiss="modal">&times;</button>
 		  <h4 class="modal-title"></h4>
@@ -417,7 +413,7 @@
 	<div class="modal-dialog">
   
 	  <!-- Modal content-->
-	  <div class="modal-content">
+	  <div class="modal-content" style="margin-top: 65%;">
 		<div class="modal-header">
 		  <button type="button" class="close" data-dismiss="modal">&times;</button>
 		  <h4 class="modal-title"></h4>
@@ -437,7 +433,7 @@
 	<div class="modal-dialog">
   
 	  <!-- Modal content-->
-	  <div class="modal-content">
+	  <div class="modal-content" style="margin-top: 65%;">
 		<div class="modal-header">
 		  <button type="button" class="close" data-dismiss="modal">&times;</button>
 		  <h4 class="modal-title"></h4>

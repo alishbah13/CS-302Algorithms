@@ -9,8 +9,9 @@ def home():
 
 @app.route('/lcs', methods=['GET', 'POST'])
 def lcs():
-    input_list = getFiles("lcs")
-    return input_list[0]
+    # input_list = getFiles("lcs")
+    # return input_list[0]
+    input_list = [1,2,3,4,5,6,7,8,9,10]
     out = " "
     if request.method == 'POST':
         dat = request.form['file']
