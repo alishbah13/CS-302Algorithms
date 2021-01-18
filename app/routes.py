@@ -29,9 +29,76 @@ def lcs():
 def scs():
     input_list = getFiles("scs")
     out = " "
+    in1 = " "
+    in2 = " "
     if request.method == 'POST':
         dat = request.form['file']
-        return dat
-    else:
-        flash("hello")
-    return render_template('lcs.html', title='Shortest Common Supersequence', inpt=input_list, output=out)
+        obj = input_list[int(dat)-1]['data']
+        lookup = {}
+        in1 = "String 1 : " + obj[0]
+        in2 = "String 2 : " + obj[1]
+        out =  "Length of Shortest Common Supersequence = " + str ( SCSLength(obj[0], obj[1], len(obj[0]), len(obj[1]), lookup) )
+        return render_template('lcs.html', title='Shortest Common Supersequence', inpt=input_list , output=out, in1=in1, in2=in2)
+    return render_template('lcs.html', title='Shortest Common Supersequence', inpt=input_list , output=out)
+    
+@app.route('/lvd', methods=['GET', 'POST'])
+def lvd():
+    input_list = getFiles("lvd")
+    out = " "
+    in1 = " "
+    in2 = " "
+    if request.method == 'POST':
+        dat = request.form['file']
+        obj = input_list[int(dat)-1]['data']
+        in1 = "String 1 : " + obj[0]
+        in2 = "String 2 : " + obj[1]
+        out =  "Levenshtein Distance = " + str( dist( obj[0], obj[1]) )
+        return render_template('lcs.html', title='Levenshtein Distance', inpt=input_list , output=out, in1=in1, in2=in2)
+    return render_template('lcs.html', title='Levenshtein Distance', inpt=input_list , output=out)
+    
+@app.route('/lis', methods=['GET', 'POST'])
+def lis():
+    input_list = getFiles("lis")
+    out = " "
+    in1 = " "
+    in2 = " "
+    if request.method == 'POST':
+        dat = request.form['file']
+        obj = input_list[int(dat)-1]['data']
+        in1 = "Input : " + str( obj )
+        out =  "Longest Increasing Subsequence = " + str( LIS( obj ) )
+        return render_template('lcs.html', title='Longest Increasing Subsequence', inpt=input_list , output=out, in1=in1, in2=in2)
+    return render_template('lcs.html', title='Longest Increasing Subsequence', inpt=input_list , output=out)
+
+@app.route('/mcm', methods=['GET', 'POST'])
+def mcm():
+    input_list = getFiles("mcm")
+    out = " "
+    in1 = " "
+    in2 = " "
+    if request.method == 'POST':
+        dat = request.form['file']
+        obj = input_list[int(dat)-1]['data']
+        in1 = "Input : " + str( obj )
+        out =  "Matrix Chain Multiplication, minimum cost = " + str( MCM( obj ) )
+        return render_template('lcs.html', title='Matrix Chain Multiplication', inpt=input_list , output=out, in1=in1, in2=in2)
+    return render_template('lcs.html', title='Matrix Chain Multiplication', inpt=input_list , output=out)
+
+@app.route('/ks01', methods=['GET', 'POST'])
+def ks01():
+    input_list = getFiles("ks01")
+    out = " "
+    in1 = " "
+    in2 = " "
+    in3 = " "
+    if request.method == 'POST':
+        dat = request.form['file']
+        v = input_list[int(dat)-1]['data']['v']
+        w = input_list[int(dat)-1]['data']['w']
+        W = input_list[int(dat)-1]['data']['W']
+        in1 = "Weights : " + str( w )
+        in2 = "Values : " + str( v )
+        in3 = "Required weight : " + str( W )
+        out =  "Knapsack, minimum cost = " + str( KS( v, w, W ) )
+        return render_template('lcs.html', title='Knapsack 0/1', inpt=input_list , output=out, in1=in1, in2=in2, in3=in3)
+    return render_template('lcs.html', title='Knapsack 0/1', inpt=input_list , output=out)
