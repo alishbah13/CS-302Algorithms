@@ -91,3 +91,38 @@ def KS(v, w, W):
                 T[i][j] = max(T[i - 1][j], T[i - 1][j - w[i - 1]] + v[i - 1])
 
     return T[len(v)][W]
+
+def Coins(S, N):
+    T = [0] * (N + 1)
+    for i in range(1, N + 1):
+        T[i] = float('inf')
+        for c in range(len(S)):
+            if i - S[c] >= 0:
+                res = T[i - S[c]]
+                if res != float('inf'):
+                    T[i] = min(T[i], res + 1)
+    return T[N]
+
+def Rc(price, n):
+    T = [0] * (n + 1)
+    for i in range(1, n + 1):
+        for j in range(1, i + 1):
+            T[i] = max(T[i], price[j - 1] + T[i - j])
+    return T[n] 
+ 
+def subsetSum(A, n, sum):
+    T = [[False for x in range(sum + 1)] for y in range(n + 1)]
+    for i in range(n + 1):
+        T[i][0] = True
+    for i in range(1, n + 1):
+        for j in range(1, sum + 1):
+            if A[i - 1] > j:
+                T[i][j] = T[i - 1][j]
+            else:
+                T[i][j] = T[i - 1][j] or T[i - 1][j - A[i - 1]]
+ 
+    return T[n][sum]
+ 
+def Partition(A):
+    total = sum(A)
+    return (total & 1) == 0 and subsetSum(A, len(A), total // 2)
