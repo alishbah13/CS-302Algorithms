@@ -1,5 +1,7 @@
 
-def LCS(String1, String2, len1, len2):   
+def LCS(String1, String2):  
+    len1 = len(String1)
+    len2 = len(String2) 
     if len1 == 0 or len2 == 0:
         return 0
     if String1[len1 - 1] == String2[len2 - 1]:
