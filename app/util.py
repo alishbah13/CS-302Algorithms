@@ -43,7 +43,3 @@ def getFiles(alg_name):
 
     files = [ i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
     return files
-
-def displayOutput(n):
-    x = n + ' fifty '
-    return x

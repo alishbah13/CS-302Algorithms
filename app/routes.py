@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template, url_for, request, Flask, flash
-from app.util import getFiles, displayOutput
+from app.util import getFiles
 from app.dp import *
 
 @app.route('/', methods=['GET', 'POST'])
