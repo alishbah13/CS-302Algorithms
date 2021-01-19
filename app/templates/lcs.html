@@ -241,8 +241,8 @@
 		</form>
 			
 	<div class="content">
-		<div class="panel-header bg-primary-gradient">
-			<div class="page-inner"style="background-color:black; height: 300px; font-family: monospace; color: #64cf38;">
+		<div class="panel-header bg-primary-gradient" style="max-height: max-content;">
+			<div class="page-inner"style="background-color:black; height:300px; overflow:scroll; font-family: monospace; color: #64cf38;">
 				<p>{{ in1 }}</p>
 				<p>{{ in2 }}</p>
 				<p>{{ in3 }}</p>
@@ -265,7 +265,7 @@
 			<button type="button" class="close" data-dismiss="modal">&times;</button>
 		  
 		</div>
-		<div class="modal-body">
+		<div class="modal-body" >
 		  <p style="color: black;">{{ inpt[9] }}</p>
 		</div>
 		<div class="modal-footer">

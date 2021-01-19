@@ -126,3 +126,15 @@ def subsetSum(A, n, sum):
 def Partition(A):
     total = sum(A)
     return (total & 1) == 0 and subsetSum(A, len(A), total // 2)
+
+def wordBreak(dict, str):
+ 
+    if not str:
+        return True
+    for i in range(1, len(str) + 1):
+ 
+        prefix = str[:i]
+
+        if prefix in dict and wordBreak(dict, str[i:]):
+            return True
+    return False

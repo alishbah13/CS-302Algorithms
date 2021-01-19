@@ -152,3 +152,19 @@ def partition():
         return render_template('lcs.html', title='Partition Problem', inpt=input_list , output=out, in1=in1)
     return render_template('lcs.html', title='Partition Problem', inpt=input_list , output=out)
 
+
+@app.route('/wb', methods=['GET', 'POST'])
+def wb():
+    input_list = getFiles("wb")
+    out = " "
+    in1 = " "
+    in2 = " "
+    if request.method == 'POST':
+        dat = request.form['file']
+        s = input_list[int(dat)-1]['data']['s']
+        wd = input_list[int(dat)-1]['data']['wordDict']
+        in1 = "String : " + str( s )
+        in2 = "Word dictionary : " + str( wd )
+        out =  "Word break : " + str( wordBreak( wd, s ) )
+        return render_template('lcs.html', title='Word Break Problem', inpt=input_list , output=out, in1=in1, in2=in2)
+    return render_template('lcs.html', title='Word Break Problem', inpt=input_list , output=out)
