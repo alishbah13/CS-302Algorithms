@@ -102,3 +102,53 @@ def ks01():
         out =  "Knapsack, minimum cost = " + str( KS( v, w, W ) )
         return render_template('lcs.html', title='Knapsack 0/1', inpt=input_list , output=out, in1=in1, in2=in2, in3=in3)
     return render_template('lcs.html', title='Knapsack 0/1', inpt=input_list , output=out)
+
+
+@app.route('/coin', methods=['GET', 'POST'])
+def coin():
+    input_list = getFiles("coin")
+    out = " "
+    in1 = " "
+    in2 = " "
+    if request.method == 'POST':
+        dat = request.form['file']  
+        sett = input_list[int(dat)-1]['data']['coins']
+        Change_Req = input_list[int(dat)-1]['data']['money']
+        in1 = "Coin Values : " + str( sett )
+        in2 = "Change Required : " + str( Change_Req )
+        out =  "Minimun coins Required = " + str( Coins( sett , Change_Req ) )
+        return render_template('lcs.html', title='Coin Change', inpt=input_list , output=out, in1=in1, in2=in2)
+    return render_template('lcs.html', title='Coin Change', inpt=input_list , output=out)
+
+
+@app.route('/rc', methods=['GET', 'POST'])
+def rc():
+    input_list = getFiles("rc")
+    out = " "
+    in1 = " "
+    in2 = " "
+    if request.method == 'POST':
+        dat = request.form['file']  
+        price = input_list[int(dat)-1]['data']['p']
+        n = input_list[int(dat)-1]['data']['n']
+        length = input_list[int(dat)-1]['data']['l']
+        in1 = "Rod Lenghts : " + str( length )
+        in2 = "Rod prices : " + str( price )
+        out =  "Profit is = " + str( Rc( price, n ) )
+        return render_template('lcs.html', title='Rod Cutting', inpt=input_list , output=out, in1=in1, in2=in2)
+    return render_template('lcs.html', title='Rod Cutting', inpt=input_list , output=out)
+
+    
+@app.route('/partition', methods=['GET', 'POST'])
+def partition():
+    input_list = getFiles("partition")
+    out = " "
+    in1 = " "
+    if request.method == 'POST':
+        dat = request.form['file']
+        obj = input_list[int(dat)-1]['data']
+        in1 = "Input : " + str( obj )
+        out =  "Partition with equal sum possible? := " + str( Partition( obj ) )
+        return render_template('lcs.html', title='Partition Problem', inpt=input_list , output=out, in1=in1)
+    return render_template('lcs.html', title='Partition Problem', inpt=input_list , output=out)
+
