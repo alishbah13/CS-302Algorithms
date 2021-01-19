@@ -91,3 +91,4 @@ def KS(v, w, W):
                 T[i][j] = max(T[i - 1][j], T[i - 1][j - w[i - 1]] + v[i - 1])
 
     return T[len(v)][W]
+
